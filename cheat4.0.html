@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- CDN of fontawsome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <!-- CDN of Bootstrap -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css"
+      integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+      crossorigin="anonymous"
+    />
+
+    <!-- CDN of mark.js -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.11.1/mark.min.js"
+      integrity="sha512-5CYOlHXGh6QpOFA/TeTylKLWfB3ftPsde7AnmhuitiTX4K5SqCLBeKro6sPS8ilsz1Q4NRx3v8Ko2IBiszzdww=="
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- CDN of google font -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@500&display=swap");
+    </style>
+
+    <style>
+      body {
+        background-color: black;
+      }
+
+      .highlight {
+        color: black;
+        padding: 5px;
+        background: white;
+        font-weight: bolder;
+        border: 1px solid red;
+      }
+      .data {
+        color: white;
+        font-size: 15px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container my-3 p-2" align="center">
+      <input
+        type="text"
+        size="30"
+        placeholder="search..."
+        id="searched"
+        style="
+          border: 1px solid black;
+          width: 90%;
+          height: 30px;
+          box-shadow: 10px 10px 10px black;
+        "
+      />
+    </div>
+
+    <div class="container-fluid" >
+      <pre id="data" class="data">
+          What Can You Do Now?
+If we successfully edited your file, you can now download it on your hard drive or device. Of course, you can save your PDF or other file to a cloud storage as well. We currently support Dropbox and Google Drive.
+
+If you received an error, please try again or send a message to our support team at time2help@pdf2go.com.
+
+Convert Another PDF
+Now, you can go on and convert your PDF file into another format with our online PDF converter. To do so, simply choose the Convert PDF function in the dropdown menu above. Or you can visit the PDF converter directly by clicking on the link in the navigation.
+
+Of course, converting your PDF into another format – image, document or even presentation – is also possible!
+
+Compress Another PDF
+Your PDF file is still too big? Then choose our PDF compression function in the dropdown menu above. Using compression, you can reduce the file size of a PDF on the basis of different presets.
+
+Compressing another PDF file is possible as well, of course. Just go to the Compress PDF function in the navigation and upload another PDF to reduce its file size.
+
+Resize Another PDF
+You have successfully edited your PDF, but now you want to change the PDF paper size? Choose our "Resize PDF" function from the dropdown menu to change the paper size of the just edited PDF. A4, A3, letter, legal? You choose.
+
+If you want to resize a new PDF, however, you can always navigate to the Resize PDF function in the navigation.
+
+Edit Another PDF Page
+After you already edited, changed or converted your PDF document, you can now also edit the pages separately. Enter text or draw onto a PDF page by selecting "Edit PDF" in the dropdown menu above.
+
+What? You didn't know PDF editing like this was possible? Then head over to Edit PDF from the main navigation and give it a try!
+
+Sort & Edit More PDF Pages
+If you are done editing your PDF, choose "Sort & Delete" from the dropdown menu to rearrange the pages of your PDF or to delete single PDF pages.
+
+If you want to sort the pages or delete some pages from another PDF, you can always click on Sort & Delete in the navigation and upload your PDF to edit it.
+
+Split Or Merge Another PDF
+You are not done editing your PDF yet? Then click on the dropdown menu above. Choosing "Split PDF" will allow you to split the PDF you have just edited into two or more separate PDFs. Or you can merge it with another PDF document by clicking on "Merge PDF".
+
+Of course you can edit another PDF as well. To split up a PDF, go to Split PDF in the navigation. To merge two or more PDFs, navigate to Merge PDF.
+
+Rotate Another PDF
+If you successfully edited your PDF, you can now rotate any pages that are upside-down or rotated to some degree. It's easy, just choose "Rotate PDF" from the dropdown menu and rotate the pages you select to the left or right, individually or all together.
+
+You have another PDF with upside-down pages? Then you can go to Rotate PDF by clicking on the link in the navigation and fix those pages.
+
+Protect Another PDF
+After you successfully edited or converted your PDF, you can now protect it by adding password protection. Choose the corresponding link from the dropdown menu and add a open and permission password as well as permissions for people with the open password.
+
+If you want to password protect another PDF instead, check out the navigation. You can access the protect PDF function by clicking on the according link there.
+
+Edit a PDF file
+ Edit PDF
+ Merge PDF
+ Split PDF
+ Sort and delete PDF pages
+ Rotate PDF pages
+ PDF Creator
+Improve PDF files
+ Compress PDF
+ Protect PDF
+ Unlock PDF
+ Change PDF page size
+ Repair PDF
+ Optimize PDF for web
+ Make PDF searchable
+Convert from PDF
+ Convert from PDF
+ PDF to Word
+ PDF to JPG
+ PDF to PowerPoint
+ PDF to Excel
+ PDF to text
+Convert to PDF
+ Convert to PDF
+ Word to PDF
+ JPG to PDF
+ PowerPoint to PDF
+ Excel to PDF
+ EPUB to PDF
+ DJVU to PDF
+		</pre
+      >
+    </div>
+
+    <script>
+      let searched = document.getElementById("searched");
+      searched.addEventListener("input", function () {
+        var data = new Mark(document.getElementById("data"));
+
+        // First unmark the highlighted word or letter
+        data.unmark();
+
+        // Highlight letter or word
+        data.mark(searched.value, { className: "highlight" });
+      });
+    </script>
+  </body>
+</html>
